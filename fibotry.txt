@@ -1,0 +1,19 @@
+public class FibonacciSeries {
+    public static void printFibonacci(Integer n) {
+        Integer first = 0;
+        Integer second = 1;
+        System.debug('Fibonacci Series up to ' + n + ' terms:');
+        
+        if (n <= 0) {
+            System.debug('Invalid input. Enter a positive integer.');
+            return;
+        }
+        
+        for (Integer i = 1; i <= n; i++) {
+            System.debug(first);
+            Integer next = first + second;
+            first = second;
+            second = next;
+        }
+    }
+}

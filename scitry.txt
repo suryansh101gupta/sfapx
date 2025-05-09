@@ -1,0 +1,63 @@
+    public class InterestCalc{
+
+    public static Double calculatesi(Double p, Double r, Double t){
+        Double si = (p * r * t)/100;
+        return si;
+    }
+
+    public static Double calculateci(Double p, Double r, Double t){
+        Double ci = p * Math.pow((1 + (r/100)), t) - p;
+        return ci;
+    }
+
+    public static void run(){
+        Double p = 1000;
+        Double r = 5;
+        Double t = 2;
+
+        Double s = calculatesi(p, r, t);
+        System.debug('si' + s);
+
+        Double c = calculateci(p, r, t);
+        System.debug('ci' + c);
+    }
+}
+
+
+
+/*    // Method for calculating Simple Interest
+    public static Decimal calculateSimpleInterest(Decimal principal, Decimal rate, Decimal years) {
+        // Simple Interest formula: SI = (P * R * T) / 100
+        Decimal simpleInterest = (principal * rate * years) / 100;
+        return simpleInterest;
+    }
+
+    // Method for calculating Compound Interest
+    public static Decimal calculateCompoundInterest(Decimal principal, Decimal rate, Decimal years) {
+        // Convert Decimal to Double for power calculation
+        Double principalDouble = principal.doubleValue();
+        Double rateDouble = rate.doubleValue();
+        Double yearDouble = years.doubleValue();
+
+        // Compound Interest formula: CI = P * (1 + R/100)^T - P
+        Double compoundInterestDouble = principalDouble * Math.pow((1 + (rateDouble / 100)), yearDouble) - principalDouble;
+        Decimal compoundInterest = Decimal.valueOf(compoundInterestDouble);
+        return compoundInterest;
+    }
+
+    // Example usage
+    public static void testInterestCalculations() {
+        Decimal principal = 1000; // Principal amount
+        Decimal rate = 5; // Rate of interest
+        Decimal years = 2; // years period in years
+
+        // Calculate Simple Interest
+        Decimal simpleInterest = calculateSimpleInterest(principal, rate, years);
+        System.debug('Simple Interest: ' + simpleInterest);
+
+        // Calculate Compound Interest
+        Decimal compoundInterest = calculateCompoundInterest(principal, rate, years);
+        System.debug('Compound Interest: ' + compoundInterest);
+    }
+
+*/

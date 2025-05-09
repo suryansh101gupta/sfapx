@@ -1,0 +1,54 @@
+public class MatrixMultiplication {
+    
+    // Method to multiply two matrices
+    public static List<List<Integer>> multiplyMatrices(List<List<Integer>> matrix1, List<List<Integer>> matrix2) {
+        // Get dimensions of matrices
+        Integer rows1 = matrix1.size();
+        Integer cols1 = matrix1[0].size();
+        Integer rows2 = matrix2.size();
+        Integer cols2 = matrix2[0].size();
+
+        // Ensure number of columns in matrix1 equals number of rows in matrix2
+        if (cols1 != rows2) {
+            throw new IllegalArgumentException('Matrix dimensions do not match for multiplication.');
+        }
+
+        // Initialize result matrix with zeroes
+        List<List<Integer>> result = new List<List<Integer>>();
+        for (Integer i = 0; i < rows1; i++) {
+            List<Integer> row = new List<Integer>();
+            for (Integer j = 0; j < cols2; j++) {
+                row.add(0);
+            }
+            result.add(row);
+        }
+
+        // Perform matrix multiplication
+        for (Integer i = 0; i < rows1; i++) {
+            for (Integer j = 0; j < cols2; j++) {
+                for (Integer k = 0; k < cols1; k++) {
+                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+
+        return result;
+    }
+
+    // Example usage of the matrix multiplication
+    public static void runExample() {
+        List<List<Integer>> mat1 = new List<List<Integer>>{
+            new List<Integer>{1, 2},
+            new List<Integer>{3, 4}
+        };
+
+        List<List<Integer>> mat2 = new List<List<Integer>>{
+            new List<Integer>{5, 6},
+            new List<Integer>{7, 8}
+        };
+
+        List<List<Integer>> product = multiplyMatrices(mat1, mat2);
+
+        System.debug('Matrix Product: ' + product);
+    }
+}

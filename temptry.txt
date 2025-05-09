@@ -1,0 +1,16 @@
+public class TempConvert {
+    
+    public void convert(double celsius){
+        double f = 0;
+        f = 32 + (1.8 * celsius);
+        System.debug('Temperature in °C is: '+celsius);
+        System.debug('Temperature in °F is: '+f);
+    }
+    
+    public void convertf(double far){
+        double c = 0;
+        c = (far - 32) * (5.0/9.0) ;
+        System.debug('Temperature in °F is: '+far);
+        System.debug('Temperature in °C is: '+c);
+    }
+}

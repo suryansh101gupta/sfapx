@@ -1,0 +1,19 @@
+public class PrimeCheck {
+    public void checkPrime(Integer num) {
+        if (num == null || num <= 1) {
+            System.debug(num + ' is not a prime number.');
+            return;
+        }
+
+        //Integer sqrt = Integer.valueOf(Math.round(Math.sqrt((Double)num)));
+
+        for (Integer i = 2; i <= Math.round(Math.sqrt(num)); i++) {
+            if (Math.mod(num,i) == 0) {
+                System.debug(num + ' is not a prime number.');
+                return;
+            }
+        }
+
+        System.debug(num + ' is a prime number.');
+    }
+}   

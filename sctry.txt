@@ -1,0 +1,133 @@
+public class Scalculator {
+    public Double firstnumber { get; set; }
+    public Double secondnumber { get; set; }
+    public Double result { get; set; }
+    public String operationName { get; set; }
+
+    public void Addition() {
+        result = firstnumber + secondnumber;
+        operationName = 'Addition';
+    }
+
+    public void Subtraction() {
+        result = firstnumber - secondnumber;
+        operationName = 'Subtraction';
+    }
+
+    public void Multiplication() {
+        result = firstnumber * secondnumber;
+        operationName = 'Multiplication';
+    }
+
+    public void Division() {
+        result = (secondnumber != 0) ? firstnumber / secondnumber : null;
+        operationName = 'Division';
+    }
+
+    public void Modulus() {
+        result = (secondnumber != 0) ? Math.mod(firstnumber.intValue(), secondnumber.intValue()) : null;
+        operationName = 'Modulus';
+    }
+
+    public void power() {
+        result = Math.pow(firstnumber, secondnumber);
+        operationName = 'Power';
+    }
+
+    public void square_root1() {
+        result = (firstnumber >= 0) ? Math.sqrt(firstnumber) : null;
+        operationName = 'Square Root of First Number';
+    }
+
+    public void square_root2() {
+        result = (secondnumber >= 0) ? Math.sqrt(secondnumber) : null;
+        operationName = 'Square Root of Second Number';
+    }
+
+    public void square1() {
+        result = firstnumber * firstnumber;
+        operationName = 'Square of First Number';
+    }
+
+    public void square2() {
+        result = secondnumber * secondnumber;
+        operationName = 'Square of Second Number';
+    }
+
+    public void sine1() {
+        result = Math.sin(firstnumber * Math.PI / 180);
+        operationName = 'Sine of First Number';
+    }
+
+    public void sine2() {
+        result = Math.sin(secondnumber * Math.PI / 180);
+        operationName = 'Sine of Second Number';
+    }
+
+    public void cosine1() {
+        result = Math.cos(firstnumber * Math.PI / 180);
+        operationName = 'Cosine of First Number';
+    }
+
+    public void cosine2() {
+        result = Math.cos(secondnumber * Math.PI / 180);
+        operationName = 'Cosine of Second Number';
+    }
+
+    public void tangent1() {
+        result = Math.tan(firstnumber * Math.PI / 180);
+        operationName = 'Tangent of First Number';
+    }
+
+    public void tangent2() {
+        result = Math.tan(secondnumber * Math.PI / 180);
+        operationName = 'Tangent of Second Number';
+    }
+
+    public void log1() {
+        result = (firstnumber > 0) ? Math.log(firstnumber) / Math.log(10) : null;
+        operationName = 'Log base 10 of First Number';
+    }
+
+    public void log2() {
+        result = (secondnumber > 0) ? Math.log(secondnumber) / Math.log(10) : null;
+        operationName = 'Log base 10 of Second Number';
+    }
+
+    public void ln1() {
+        result = (firstnumber > 0) ? Math.log(firstnumber) : null;
+        operationName = 'Natural Log of First Number';
+    }
+
+    public void ln2() {
+        result = (secondnumber > 0) ? Math.log(secondnumber) : null;
+        operationName = 'Natural Log of Second Number';
+    }
+
+    public void exp1() {
+        result = Math.exp(firstnumber);
+        operationName = 'Exponential of First Number';
+    }
+
+    public void exp2() {
+        result = Math.exp(secondnumber);
+        operationName = 'Exponential of Second Number';
+    }
+
+    public void abs1() {
+        result = Math.abs(firstnumber);
+        operationName = 'Absolute of First Number';
+    }
+
+    public void abs2() {
+        result = Math.abs(secondnumber);
+        operationName = 'Absolute of Second Number';
+    }
+
+    public void reset() {
+        firstnumber = null;
+        secondnumber = null;
+        result = null;
+        operationName = null;
+    }
+}

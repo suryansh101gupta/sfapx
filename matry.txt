@@ -1,0 +1,39 @@
+public class MatrixAddition{
+
+    public static List<List<Integer>> addMatrices(List<List<Integer>> matrix1, List<List<Integer>> matrix2){
+
+        if (matrix1.size() != matrix2.size() || matrix1[0].size() != matrix2[0].size()) {
+            throw new IllegalArgumentException('Matrices must have the same dimensions for addition.');
+        }
+
+        List<List<Integer>> result = new List<List<Integer>>();
+
+        for(Integer i = 0; i<matrix1.size(); i++ ){
+            List<Integer> row = new List<Integer>();
+            for(Integer j =0; j<matrix1[i].size(); j++){
+                row.add(matrix1[i][j] + matrix2[i][j]);
+            }
+            result.add(row);
+        }
+
+        return result;
+
+    }
+
+    public static void run(){
+        List<List<Integer>> m1 = new List<List<Integer>>{
+            new List<Integer>{7,5,3},
+            new List<Integer>{1,5,9}
+        };
+
+        List<List<Integer>> m2 = new List<List<Integer>>{
+            new List<Integer>{4,5,6},
+            new List<Integer>{8,5,2}
+        };
+
+        List<List<Integer>> sum = addMatrices(m1 , m2);
+
+        System.debug( sum );
+    }
+
+}

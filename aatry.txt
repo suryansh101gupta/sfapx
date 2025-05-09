@@ -1,0 +1,18 @@
+public class ArrayAddition {
+    public Integer addArrayElements(List<Integer> numbers) {
+        Integer sum = 0;
+        
+        // Loop through each element and add to sum
+        for(Integer num : numbers) {
+            sum += num;
+        }
+        
+        return sum;
+    }
+}
+
+
+//ArrayAddition a = new ArrayAddition();
+//List<Integer> numbers = new List<Integer>{20,50,24,65,84,11,25};
+//Integer result = a.addArrayElements(numbers);
+//System.debug('The sum of the array elements is: ' + result);
