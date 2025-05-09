@@ -1,0 +1,15 @@
+employee
+AND(Paper_c >= 1 , Con_c >= 1)
+IF(
+  AND(Paper_c >= 1, Con_c >= 1),
+  "Eligible",
+  "Not Eligible"
+)
+
+student
+FLOOR((TODAY() - DATEVALUE(DOB__c)) / 365.25) >= 18
+IF(
+  FLOOR((TODAY() - DATEVALUE(DOB__c)) / 365.25) >= 18,
+  "Eligible",
+  "Not Eligible"
+)
