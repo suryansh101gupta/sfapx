@@ -23,7 +23,7 @@ public class CurrencyConverter {
             convertedcurr=amount * conversionrate.get(conversionkey);
             System.debug('Converted Currency is '+ convertedcurr);
         }else{
-            System.debug('Conversion rate not found :( Select another currency!');
+            System.debug('Conversion rate not found :( Select another currency!'));
         }
         
         
